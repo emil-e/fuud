@@ -1,0 +1,57 @@
+main-font = "Open Sans", sans-serif
+heading-font = "Oswald", sans-serif
+
+/* Coolors Exported Palette - coolors.co/f1e8b8-f9e784-e58f65-d05353-191919 */
+color1 = #f1e8b8 // bright yellow
+color2 = #f9e784 // yellow
+color3 = #e58f65 // orange
+color4 = #d05353 // red
+color5 = #191919 // black
+
+body
+  font-family main-font
+  background-color color1
+
+bar-height = 55px
+
+ui-bar(position)
+  opposite = opposite-position(position)
+  border-size = 5px
+  
+  position fixed
+  left 0
+  right 0
+  {position} 0
+  height (bar-height - border-size)
+  z-index 100
+  
+  background-color color4
+  color color2
+  border-{opposite} 5px dotted color3
+  overflow hidden
+  line-height bar-height
+
+.bar-top
+  ui-bar(top)
+
+.bar-bottom
+  ui-bar(bottom)
+
+$heading
+  font-family heading-font
+  margin-top 1.2em
+  margin-bottom 0.5em
+  &:first-child
+    margin-top 0
+  
+.text
+  background-color color1
+  color color5
+
+  h2
+    @extend $heading
+    font-size 1.5em
+
+  h3
+    @extend $heading
+    font-size 1.2em

@@ -1,0 +1,12 @@
+{
+  "name": "fuud",
+  "private": true,
+  "dependencies": {
+    "browserify": "~7",
+    "react": "~0.12",
+    "reactify": "~0.17",
+    "when": "~3.6",
+    "lodash": "~2.4",
+    "stylus": "~0.49"
+  }
+}
